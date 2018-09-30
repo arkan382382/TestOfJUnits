@@ -5,9 +5,7 @@ public class Product {
     private float price;
 
 
-    public Product(String name){
-        this.name = name;
-    }
+    //public Product(String name){        this.name = name;    }
 
     public Product(String name, float price){
         this.name = name;
@@ -15,6 +13,9 @@ public class Product {
     }
     public String getProductName(){
         return name;
+    }
+    public float getProductPrice(){
+        return price;
     }
 
 }

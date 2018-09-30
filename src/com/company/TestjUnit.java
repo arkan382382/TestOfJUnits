@@ -16,14 +16,22 @@ public class TestjUnit {
     public void checkProductsInsideOfBasket(){
         Basket basket_2 = new Basket("drugi");
         basket_2.AddItem("milk");
-        Assert.assertFalse(basket_2.getNumberOfProducts() == true);
+        Assert.assertFalse(basket_2.getNumberOfProducts() > 0);
     }
 
     @Test
     public void checkProductsInsideOfBasket_differentWay(){
         Basket basket_3 = new Basket("trzeci");
         basket_3.AddItem2("milk", (float) 24.5);
-        Assert.assertTrue(basket_3.getNumberOfProducts_twice() == false);
+        Assert.assertTrue(basket_3.getNumberOfProducts_twice() >0);
+    }
+
+    @Test
+    public void userCanCreateOrder(){
+        User firstUser = new User("Adam Kowalski");
+        firstUser.createOrder();
+        firstUser.addToCart("Pencil", (float)3.5);
+        firstUser.howManyToPay();
     }
 
 
